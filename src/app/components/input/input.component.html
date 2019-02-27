@@ -1,0 +1,12 @@
+<div style="margin-top: 25%;">
+  Input: <input [(ngModel)]="nonFiniteStream">
+  <button (click)="reset()">Reset</button>
+  <app-output [nonFiniteStream]="nonFiniteStream" (A_B_Emitter)="getA_B($event)"></app-output>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <div  *ngFor="let letter of output">
+      {{letter}}
+    </div>
+  </div>
+</div>
+
+
